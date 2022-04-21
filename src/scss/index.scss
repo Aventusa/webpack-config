@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Wisper-Regular', sans-serif;
+  background-color: #ffffff;
+  color: $black;
+}
