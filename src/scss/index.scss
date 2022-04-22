@@ -8,6 +8,9 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  transform: translate(10px, 10px);
   font-size: 3rem;
   text-align: center;
   font-family: 'Wisper-Regular', sans-serif;

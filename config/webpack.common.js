@@ -8,10 +8,10 @@ module.exports = {
         index: './index.js',
     },
     output: {
-        clean: true,
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].bundle.js',
-        assetModuleFilename: 'images/[name][ext]'
+        publicPath: 'auto',
+        filename: 'js/[name].bundle.js',
+        assetModuleFilename: 'images/[name][ext]',
     },
     module: {
         rules: [
@@ -22,14 +22,17 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [
-                            ['@babel/preset-env', { targets: "defaults" }]
+                            ['@babel/preset-env', { targets: 'defaults' }],
                         ]
                     }
                 }
             },
             {
                 test: /\.html$/i,
-                loader: "html-loader",
+                loader: 'html-loader',
+                options: {
+                    minimize: false,
+                }
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -45,16 +48,19 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader",
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
                 ],
             },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template:  'index.html',
+            publicPath: './',
+            minify: false,
+            chunks: ['index'],
         }),
     ],
     resolve: {
