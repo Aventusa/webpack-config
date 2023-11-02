@@ -1,0 +1,37 @@
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #555555;
+  background: rgb(242, 242, 242);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(228, 228, 228, 1) 68%,
+    rgba(217, 217, 217, 1) 100%
+  );
+}
+
+a {
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #0193ff;
+  }
+}

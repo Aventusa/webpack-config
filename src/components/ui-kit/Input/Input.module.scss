@@ -1,0 +1,10 @@
+.root {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #b3b3b3;
+  padding: 0 8px;
+
+  &:focus {
+    outline: 2.5px solid #e3eeff;
+  }
+}

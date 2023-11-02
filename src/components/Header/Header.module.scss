@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 25px;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.13);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 1024px;
+  height: inherit;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.auth {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
